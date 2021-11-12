@@ -5,8 +5,6 @@
   - formulario para agregar elementos.
   - cada elemento debe tener un boton para eliminarlo.
 
-  link: https://github.com/dchiapa/RS-todo-app.
-
 - [ ] TODO APP: Tachando elementos
 
   - ademas de lo hecho en el proyecto anterior.
