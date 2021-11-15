@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Form = ({ setText, text }) => {
+export const Form = ({ items, setItems, setText, text }) => {
   const handleText = (e) => {
     e.preventDefault();
     setText(e.target.value);
@@ -9,7 +9,7 @@ export const Form = ({ setText, text }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (text) {
-      console.log(text);
+      setItems([...items, text]);
       setText("");
     }
   };
