@@ -1,5 +1,7 @@
 # TODO APP
-
+  
+  cada versión, se desarrolla desde cero.
+  
 - [x] V1.0 : Lista sencilla
 
   - formulario para agregar elementos.
