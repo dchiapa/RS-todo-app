@@ -1,24 +1,27 @@
 import React from "react";
 
-import "./Form.scss";
-
 export const Form = ({ items, setItems, setText, text }) => {
-  const handleSubmit = (e) => {
+  const handleText = (e) => {
     e.preventDefault();
-    let itemIndex = items.length + 1;
-    setItems([...items, { index: itemIndex, text: text }]);
-    setText("");
-  };
-
-  const handleChange = (e) => {
     setText(e.target.value);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (text) {
+      setItems([
+        ...items,
+        { completed: false, content: text, index: items.length },
+      ]);
+      setText("");
+    }
+  };
+
   return (
-    <form>
-      <label>Elemento a agregar:</label>
-      <input type="text" onChange={handleChange} value={text} />
-      <button onClick={handleSubmit}>Agregar</button>
+    <form onSubmit={handleSubmit}>
+      <label>Nuevo item:</label>
+      <input type="text" value={text} onChange={handleText} />
+      <button>Agregar</button>
     </form>
   );
 };

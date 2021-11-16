@@ -1,15 +1,35 @@
 import React from "react";
-
+import "./List.scss";
 import { ListItem } from "./ListItem";
 
-import "./List.scss";
+export const List = ({ items, setItems }) => {
+  let itemsList = [];
 
-export const List = ({ deleteItem, items }) => {
+  const removeItem = (id) => {
+    itemsList = items.filter((item) => item.index != id);
+    setItems(itemsList);
+  };
+
+  const completeItem = (id) => {
+    itemsList = items.map((item) => {
+      if (item.index == id) {
+        item.completed = !item.completed;
+      }
+      return item;
+    });
+    setItems(itemsList);
+  };
+
   return (
     <ul>
       {items.map((item) => {
         return (
-          <ListItem deleteItem={deleteItem} item={item} key={item.index} />
+          <ListItem
+            completeItem={completeItem}
+            item={item}
+            key={item.index}
+            removeItem={removeItem}
+          />
         );
       })}
     </ul>
