@@ -9,7 +9,10 @@ export const Form = ({ items, setItems, setText, text }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (text) {
-      setItems([...items, text]);
+      setItems([
+        ...items,
+        { completed: false, content: text, index: items.length },
+      ]);
       setText("");
     }
   };
