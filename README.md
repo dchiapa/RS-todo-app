@@ -1,19 +1,22 @@
-# TODO APP - React semanal
+# TODO APP
 
-- [x] V1.0 TODO APP: Lista sencilla
+- [x] V1.0 : Lista sencilla
 
   - formulario para agregar elementos.
-  - cada elemento debe tener un boton para eliminarlo.
+  - cada elemento debe tener un botón para eliminarlo.
 
-- [ ] TODO APP: Tachando elementos
+  commit: https://github.com/dchiapa/todo-app/tree/cfd1e0e42a2e85f163003378bca4f9e146f00867
 
-  - ademas de lo hecho en el proyecto anterior.
-  - al clickear un elemento se debe tachar, si no lo esta y destacharse si lo esta.
+- [x] V1.1: Tachando elementos
 
-- [ ] TODO APP: Persistencia
+  - al clickear un elemento se debe tachar, si no lo está y destacharse si lo está.
 
-  - ademas de lo hecho en el proyecto anterior.
-  - los elementos deben quedar guardados en localStorage.
+  commit: https://github.com/dchiapa/todo-app/tree/f2021ddc76c086b49e6b899ba8349545cf5f6def
 
-- [ ] TODO APP: Persistencia BD
+- [ ] V1.2: Persistencia
+
+  - los elementos deben ser guardados en localStorage.
+
+- [ ] V1.3: Persistencia BD
+
   - en lugar de localStorage, debe usar una base de datos.
