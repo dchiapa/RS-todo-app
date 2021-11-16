@@ -15,7 +15,7 @@ const App = () => {
         completados en un listado. El listado se pierde al cerrar el navegador.
       </p>
       <Form items={items} setItems={setItems} setText={setText} text={text} />
-      <List items={items} />
+      <List items={items} setItems={setItems} />
     </>
   );
 };
