@@ -3,6 +3,17 @@ import React from "react";
 const TodoForm = ({ handleAddItem }) => {
   const [todo, setTodo] = useState("");
 
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    handleAddItem({
+      done: false,
+      id: new Date().getTime(),
+      todo,
+    });
+    setTodo("");
+  };
+
   const handleTextChange = (e) => {
     setTodo(e.target.value);
   };
