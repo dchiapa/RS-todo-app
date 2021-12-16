@@ -1,6 +1,12 @@
 import React from "react";
 
 const TodoForm = ({ handleAddItem }) => {
+  const [todo, setTodo] = useState("");
+
+  const handleTextChange = (e) => {
+    setTodo(e.target.value);
+  };
+
   return (
     <form onSubmit={handleFormSubmit} className="form__container">
       <input
