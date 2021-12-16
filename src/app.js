@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <>
-      <h1>Todo List</h1>
+      <h1 className="todo__title">Todo List</h1>
       <TodoForm handleAddItem={handleAddItem} />
       <TodoList list={list} setList={setList} />
     </>
