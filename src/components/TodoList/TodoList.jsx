@@ -2,7 +2,7 @@ import React from "react";
 import TodoItem from "./TodoItem";
 
 const TodoList = ({ list, setList }) => {
-  const handleDelete = () => {
+  const handleDeleteCompletedes = () => {
     let deletedList = list.filter((item) => item.done != true);
     setList(deletedList);
   };
@@ -17,6 +17,11 @@ const TodoList = ({ list, setList }) => {
     setList(updateList);
   };
 
+  const handleDelete = (id) => {
+    let deleteList = list.filter((item) => item.id !== id);
+    setList(deleteList);
+  };
+
   return (
     <div>
       {list.length > 0 ? (
@@ -27,6 +32,7 @@ const TodoList = ({ list, setList }) => {
                 <TodoItem
                   key={item.id}
                   item={item}
+                  handleDelete={handleDelete}
                   handleUpdate={handleUpdate}
                 />
               );
