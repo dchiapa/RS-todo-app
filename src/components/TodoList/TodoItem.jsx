@@ -8,10 +8,13 @@ const TodoItem = ({ handleUpdate, item }) => {
 
   return (
     <li className="item" id={item.id} onClick={handleClick}>
-      <label className="item__completed__label"></label>
-      <span
-        className={item.done ? "list__item__text-complete" : "list__item__text"}
-      >
+      <input
+        type="checkbox"
+        checked={item.done}
+        readOnly
+        className={item.done ? "item__checkbox-complete" : "item__checkbox"}
+      />
+      <span className={item.done ? "item__text-complete" : "item__text"}>
         {item.todo}
       </span>
     </li>
