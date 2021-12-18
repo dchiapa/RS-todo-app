@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./TodoForm.scss";
 
 const TodoForm = ({ handleAddItem }) => {
   const [todo, setTodo] = useState("");
