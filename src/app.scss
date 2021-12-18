@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 html {
   background: rgb(0, 0, 77);
   background: linear-gradient(
@@ -20,5 +25,10 @@ body {
   margin: 0 auto;
   padding: 1rem;
   text-align: center;
-  width: 60%;
+  width: 80%;
+}
+.app__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
 }
