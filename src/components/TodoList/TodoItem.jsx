@@ -1,5 +1,5 @@
 import React from "react";
-import "./TodoItem.scss";
+import "./TodoList.scss";
 
 const TodoItem = ({ handleDelete, handleUpdate, item }) => {
   const handleUpdateClick = () => {
@@ -24,8 +24,8 @@ const TodoItem = ({ handleDelete, handleUpdate, item }) => {
       >
         {item.todo}
       </span>
-      <button className="item__btn-delete" onClick={handleDeleteClick}>
-        x
+      <button className="item__btn" onClick={handleDeleteClick}>
+        <img className="item__btn__img" src={require("./img/delete.png")} />
       </button>
     </li>
   );
