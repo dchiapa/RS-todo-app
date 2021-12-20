@@ -1,5 +1,6 @@
 import React from "react";
 import TodoItem from "./TodoItem";
+import "./TodoList.scss";
 
 const TodoList = ({ list, setList }) => {
   const handleDeleteCompleted = () => {
@@ -40,7 +41,7 @@ const TodoList = ({ list, setList }) => {
         </ul>
       ) : null}
       {list.length > 0 ? (
-        <button className="list__button" onClick={handleDeleteCompleted}>
+        <button className="list__btn" onClick={handleDeleteCompleted}>
           Borrar tareas terminadas
         </button>
       ) : null}
