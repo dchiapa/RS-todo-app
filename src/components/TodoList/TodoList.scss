@@ -43,4 +43,16 @@
       display: none;
     }
   }
+  &__text {
+    width: 50%;
+    word-wrap: break-word;
+    &-complete {
+      text-decoration: line-through;
+      width: 50%;
+      word-wrap: break-word;
+    }
+  }
+  :hover {
+    cursor: pointer;
+  }
 }
