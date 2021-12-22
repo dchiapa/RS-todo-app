@@ -11,13 +11,24 @@ const TodoItem = ({ handleDelete, handleUpdate, item }) => {
 
   return (
     <li className="item" id={item.id}>
-      <input
-        type="checkbox"
-        checked={item.done}
-        readOnly
-        className={item.done ? "item__checkbox-complete" : "item__checkbox"}
-        onClick={handleUpdateClick}
-      />
+      <label className="item__checkbox">
+        <input
+          type="checkbox"
+          className="item__checkbox__input"
+          readOnly
+          onClick={handleUpdateClick}
+        />
+        <img
+          className={
+            item.done
+              ? "item__checkbox__check"
+              : "item__checkbox__check--hidden"
+          }
+          src={require("./img/check.png")}
+          alt="check"
+        />
+      </label>
+
       <span
         className={item.done ? "item__text-complete" : "item__text"}
         onClick={handleUpdateClick}
