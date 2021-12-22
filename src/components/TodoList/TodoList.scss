@@ -55,4 +55,22 @@
   :hover {
     cursor: pointer;
   }
+  &__btn {
+    align-items: center;
+    background-color: red;
+    border: none;
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: center;
+    height: 1.5rem;
+    padding: 0.5rem;
+    width: 1.5rem;
+    &:hover {
+      cursor: pointer;
+    }
+    &__img {
+      height: 1rem;
+      width: 1rem;
+    }
+  }
 }
