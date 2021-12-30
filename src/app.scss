@@ -32,3 +32,15 @@ body {
   font-weight: bold;
   margin: 0;
 }
+
+.btn {
+  border-radius: 0.25rem;
+  box-shadow: none;
+  font-size: 1rem;
+  outline: none;
+  padding: 0.5rem;
+
+  &:hover:enabled {
+    cursor: pointer;
+  }
+}

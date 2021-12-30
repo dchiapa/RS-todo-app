@@ -15,28 +15,19 @@
       outline: none;
     }
   }
-  &__button {
+  &__btn {
     background-color: rgba(0, 212, 255, 1);
     border: 1px solid rgba(0, 0, 77, 1);
-    border-radius: 0.25rem;
     color: rgba(0, 0, 77, 1);
-    font-size: 1rem;
-    padding: 0.5rem;
-    &:active:enabled {
-      box-shadow: none;
-    }
     &:disabled {
       background-color: rgba(0, 0, 0, 0.2);
       border-color: rgba(0, 0, 0, 0.2);
       color: rgba(0, 0, 0, 0.5);
     }
-    &:focus:enabled {
-      outline: none;
-    }
+
     &:hover:enabled {
       background-color: rgba(0, 0, 77, 1);
       color: rgba(0, 212, 255, 1);
-      cursor: pointer;
     }
   }
 }
