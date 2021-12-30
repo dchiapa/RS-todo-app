@@ -19,7 +19,7 @@ cada versión, se desarrolla desde cero.
 
   - los elementos deben ser guardados en localStorage.
 
-  commit:
+  commit: https://github.com/dchiapa/todo-app/tree/cbfea7a10c10506bece7fa3a81aaa20223823423
 
 - [ ] V1.3: Persistencia BD
 
