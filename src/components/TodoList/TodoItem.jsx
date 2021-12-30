@@ -35,7 +35,7 @@ const TodoItem = ({ handleDelete, handleUpdate, item }) => {
       >
         {item.todo}
       </span>
-      <button className="item__btn" onClick={handleDeleteClick}>
+      <button className="btn item__btn" onClick={handleDeleteClick}>
         <img className="item__btn__img" src={require("./img/delete.png")} />
       </button>
     </li>

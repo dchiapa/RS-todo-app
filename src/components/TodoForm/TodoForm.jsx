@@ -27,7 +27,7 @@ const TodoForm = ({ handleAddItem }) => {
         value={todo}
         onChange={handleTextChange}
       />
-      <button className="form__button" disabled={todo ? "" : "disable"}>
+      <button className="btn form__btn" disabled={todo ? "" : "disable"}>
         Agregar
       </button>
     </form>

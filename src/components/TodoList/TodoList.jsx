@@ -41,7 +41,11 @@ const TodoList = ({ list, setList }) => {
         </ul>
       ) : null}
       {list.length > 0 ? (
-        <button className="list__btn" onClick={handleDeleteCompleted}>
+        <button
+          className="btn list__btn"
+          disabled={list.find((item) => item.done == true) ? "" : "disable"}
+          onClick={handleDeleteCompleted}
+        >
           Borrar tareas terminadas
         </button>
       ) : null}
