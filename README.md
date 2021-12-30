@@ -1,7 +1,7 @@
 # TODO APP
-  
-  cada versión, se desarrolla desde cero.
-  
+
+cada versión, se desarrolla desde cero.
+
 - [x] V1.0 : Lista sencilla
 
   - formulario para agregar elementos.
@@ -15,9 +15,11 @@
 
   commit: https://github.com/dchiapa/todo-app/tree/f2021ddc76c086b49e6b899ba8349545cf5f6def
 
-- [ ] V1.2: Persistencia
+- [x] V1.2: Persistencia
 
   - los elementos deben ser guardados en localStorage.
+
+  commit:
 
 - [ ] V1.3: Persistencia BD
 

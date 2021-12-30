@@ -1,21 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { render } from "react-dom";
 import "./app.scss";
-import { Form } from "./components/Form/Form";
-import { List } from "./components/List/List";
+import TodoForm from "./components/TodoForm/TodoForm";
+import TodoList from "./components/TodoList/TodoList";
 
 const App = () => {
-  const [text, setText] = useState("");
-  const [items, setItems] = useState([]);
+  const [list, setList] = useState(() => {
+    const savedData = localStorage.getItem("todoList");
+    const initialValue = JSON.parse(savedData);
+    return initialValue || [];
+  });
+
+  const handleAddItem = (item) => {
+    setList([...list, item]);
+  };
+
+  useEffect(() => {
+    localStorage.setItem("todoList", JSON.stringify(list));
+  }, [list]);
+
   return (
     <>
-      <h1>Todo App</h1>
-      <p>
-        Versión simple, permite agregar, borrar y marcar los elementos
-        completados en un listado. El listado se pierde al cerrar el navegador.
-      </p>
-      <Form items={items} setItems={setItems} setText={setText} text={text} />
-      <List items={items} setItems={setItems} />
+      <h1 className="app__title">Todo List</h1>
+      <TodoForm handleAddItem={handleAddItem} />
+      <TodoList list={list} setList={setList} />
     </>
   );
 };
