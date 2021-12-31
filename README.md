@@ -1,6 +1,6 @@
 # TODO APP
 
-cada versión, se desarrolla desde cero.
+Proyecto realizado ReactJs, Sass, sin CRA utilizando Parcel, para practicar habilidades, cada versión, se desarrolla desde cero.
 
 - [x] V1.0 : Lista sencilla
 
@@ -20,7 +20,3 @@ cada versión, se desarrolla desde cero.
   - los elementos deben ser guardados en localStorage.
 
   commit: https://github.com/dchiapa/todo-app/tree/cbfea7a10c10506bece7fa3a81aaa20223823423
-
-- [ ] V1.3: Persistencia BD
-
-  - en lugar de localStorage, debe usar una base de datos.
